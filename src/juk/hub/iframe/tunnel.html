@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>juk tunnel</title>
+<script type="text/javascript" src="../SecurityAlerts.js"></script>
+<script type="text/javascript" src="../Errors.js"></script>
+<script type="text/javascript" src="PostMessageIframeHubClient.js"></script>
+<script type="text/javascript">
+	function init() {
+		if (window.postMessage) {
+			var internalID = PostMessageIframeHubClient.queryURLParam("oahj");
+			var origin = PostMessageIframeHubClient.queryURLParam("oaho");
+			var securityToken = PostMessageIframeHubClient.queryURLParam("oaht");
+			window.parent.parent.PostMessageIframeContainer._pmListener.connectFromTunnel(internalID, origin, securityToken, window);
+		}
+		else {
+			throw new Error(Errors.UnsupportedUserAgent);
+		}
+	}
+</script>
+</head>
+<body onload="init();">
+</body>
+</html>

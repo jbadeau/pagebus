@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!-- 
+  
+        OpenAjax Alliance Widget Specification 
+--> 
+<widget name="Arrow" id="com.adobe.captivate.dev.sample.widgets.arrow"
+        spec="0.1b" jsClass='Arrow' sandbox='true' width='300' height='300'
+        xmlns="http://openajax.org/metadata"> 
+  
+    <requires> 
+        <libraries> 
+            <library name="dojo" version="1.7" copy="true" src="js/dojo-release-1.7.1" includeRef="false"> 
+                <preload> 
+                    djConfig="{parseOnLoad:true}"
+                </preload> 
+                <require type="javascript" src="dojo/dojo.js" copy="false" includeRef="true"/> 
+            </library> 
+            <library name ="jQuery" version="1.6.1" copy="true" src="js/jquery1.7.1/jquery-1.7.1.min.js" type="javascript"/> 
+            <library name="jQuery.svg" version="1.4.4" copy="false" src="js/jquery.svg" includeRef="false"> 
+                <require type="javascript" src="jquery.svg.js"/> 
+                <require type="css" src="jquery.svg.css"/> 
+            </library> 
+        </libraries> 
+        <require type="folder" src="assets/svg"/> 
+    </requires> 
+    <javascript src="js/arrow.js"/> 
+    <!-- 
+  
+        Properties are currently ignored by captivate since we expect the widget to do all the work that has to be done from widget xml 
+        or the widget JSON. Still we give it a stab to see if we can get in property replacement 
+    --> 
+    <properties> 
+      <property name="style" datatype="String" default="AeroArrow"/> 
+    </properties> 
+  
+    <content type='fragment'> 
+    <![CDATA[ 
+        <H1>Hello Widget!!!</H1> 
+        <div ID="__WID___ArrowShape"/> 
+    ]]> 
+    </content> 
+</widget>

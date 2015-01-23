@@ -1,0 +1,29 @@
+{
+   "spec":"1.0",
+   "id":"com.ubs.JUK.widgets.iframe",
+   "name":"Iframe",
+   "width":"100%",
+   "height":"100px",
+   "content":{
+      "type":"document",
+      "src":"iframe.html"
+   },
+   "topics":[
+      {
+         "name":"juk.switchPage",
+         "publish":true
+      },
+      {
+         "name":"juk.onWidgetResize",
+         "publish":true
+      },
+      {
+         "name":"juk.onContextChange",
+         "subscribe":true
+      },
+      {
+         "name":"juk.updateContext",
+         "publish":true
+      }
+   ]
+}

@@ -1,0 +1,10 @@
+TODO
+
+1. make sure all promised methods implement error handling
+2. remove inline widget dependency on global container reference
+5. explore how to support multiple versions libraries for inline widgets (have a look at system.js or uRequire)
+6. add support for widget properties
+7. add support for widget pub/sub topics
+8. add context support
+9. add angular module for services and directives
+10. add junit tests and possibly functional tests
